@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The VIT Computer Education</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        /* Solid Yellow color for Text */
+        h1 {
+            color: #ffbc00; /* Solid Yellow Color */
+            font-size: 50px;
+            font-weight: bold;
+        }
+        nav {
+            background-color: #003060;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #004080;
+            color: white;
+        }
+        
+        /* Course Detail - Hidden Initially */
+        .course-detail {
+            display: none;
+            margin-top: 10px;
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            /* Smooth transition for animation */
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+        
+        .course-title {
+            cursor: pointer;
+            color: #003060;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .course-title:hover {
+            text-decoration: underline;
+        }
+
+        /* Animation to slide down */
+        .course-detail.show {
+            max-height: 200px; /* Adjust this value based on content size */
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The VIT</h1>
+    <p>The VIT Computer Education</p>
+    <p>ISO 9001:2008 Certified | Govt. Regd. No. 47290095</p>
+</header>
+
+<nav>
+    <a href="#about">About Us</a>
+    <a href="#courses">Courses</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div id="about" class="container">
+    <h2>About Us</h2>
+    <p>The VIT Computer Education is a leading institution providing high-quality computer education. We are ISO 9001:2008 certified and are dedicated to empowering students with the skills needed to succeed in the digital world.</p>
+</div>
+
+<div id="courses" class="container">
+    <h2>Our Courses</h2>
+    
+    <div class="course-title" onclick="toggleCourseDetail('course1')">RS-CIT: Basic computer course for government jobs</div>
+    <div id="course1" class="course-detail">
+        <p><strong>RS-CIT</strong> is a government-recognized computer literacy course that prepares you for government jobs. It covers basic computer skills, word processing, and internet usage.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course2')">Advanced Excel: Master spreadsheet tools for professional use</div>
+    <div id="course2" class="course-detail">
+        <p><strong>Advanced Excel</strong> focuses on advanced spreadsheet techniques, including pivot tables, data analysis, and automation with macros. It’s essential for professionals working with data.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course3')">Web Development: Learn to build modern, responsive websites</div>
+    <div id="course3" class="course-detail">
+        <p><strong>Web Development</strong> teaches you how to design and develop responsive websites using HTML, CSS, JavaScript, and popular frameworks like Bootstrap and React.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course4')">Programming Languages: Courses in Python, Java, and more</div>
+    <div id="course4" class="course-detail">
+        <p><strong>Programming Languages</strong> covers programming languages like Python, Java, and C++. You'll learn how to solve problems with code and create software applications.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course5')">DTP (Desktop Publishing): Learn tools like Photoshop, CorelDRAW, and Illustrator for graphic designing</div>
+    <div id="course5" class="course-detail">
+        <p><strong>DTP (Desktop Publishing)</strong> introduces graphic design tools like Photoshop, CorelDRAW, and Illustrator, helping you create visual content like brochures, posters, and digital designs.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course6')">Tally with GST: Accounting software training for financial management</div>
+    <div id="course6" class="course-detail">
+        <p><strong>Tally with GST</strong> teaches accounting and financial management using Tally software. You will also learn GST principles and how to manage taxes.</p>
+    </div>
+
+    <div class="course-title" onclick="toggleCourseDetail('course7')">Hardware & Networking: Comprehensive training in computer hardware and networking concepts</div>
+    <div id="course7" class="course-detail">
+        <p><strong>Hardware & Networking</strong> covers the fundamentals of computer hardware, network setup, troubleshooting, and security, making you an expert in IT infrastructure.</p>
+    </div>
+</div>
+
+<div id="contact" class="container">
+    <h2>Contact Us</h2>
+    <h3>Head Office:</h3>
+    <p>7, Ground Floor, Vinayak Complex-A,<br>Durga Nursery Main Road, Udaipur (Raj)</p>
+    <p><strong>Phone:</strong> 8107479999, 8929260702</p>
+
+    <h3>Corporate Office:</h3>
+    <p>Super Market Building, Opp. Aravali Hospital,<br>Subhash Chouraha, Udaipur (Raj)</p>
+    <p><strong>Phone:</strong> 7976770964, 9351952899</p>
+
+    <h3>Website & Email</h3>
+    <p><strong>Website:</strong> <a href="http://www.theviteducation.org" target="_blank">www.theviteducation.org</a></p>
+    <p><strong>Email:</strong> info@theviteducation.org</p>
+</div>
+
+<footer>
+    <p>&copy; 2025 The VIT Computer Education. All rights reserved.</p>
+</footer>
+
+<script>
+    // Toggle course detail visibility with animation
+    function toggleCourseDetail(courseId) {
+        var courseDetail = document.getElementById(courseId);
+        if (courseDetail.style.display === "none" || courseDetail.style.display === "") {
+            courseDetail.style.display = "block";
+            // Add the 'show' class for animation
+            courseDetail.classList.add("show");
+        } else {
+            courseDetail.classList.remove("show");
+            setTimeout(function() {
+                courseDetail.style.display = "none";
+            }, 500); // Wait for the animation to finish before hiding
+        }
+    }
+</script>
+
+</body>
+</html>
